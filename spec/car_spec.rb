@@ -10,9 +10,9 @@ RSpec.describe Car do
       expect(car).to be_an_instance_of Car
     end
 
-    # it "can be started" do
-    #   expect(car.running?).to eq true
-    # end
+    it "can be started" do
+      expect(car.running?).to eq true
+    end
 
   end
 
