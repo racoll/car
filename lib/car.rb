@@ -17,5 +17,10 @@ class Car
     @tank_contents
   end
 
+  def fill_up
+    @tank_contents += 1
+  end
+
+
 
 end
