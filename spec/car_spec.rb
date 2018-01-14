@@ -31,7 +31,7 @@ RSpec.describe Car do
 
     it "can be driven" do
       car.drive
-      expect(car.in_motion?).to eq true
+      expect(car.in_journey?).to eq true
     end
 
   end

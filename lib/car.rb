@@ -1,11 +1,11 @@
 class Car
 
   attr_reader :tank_contents
-  
+
   def initialize
     @engine_on = false
     @tank_contents = 0
-    @in_motion = false
+    @in_journey = false
   end
 
   def running?
@@ -24,12 +24,12 @@ class Car
     @tank_contents += 1
   end
 
-  def in_motion?
-    @in_motion
+  def in_journey?
+    @in_journey
   end
 
   def drive
-    @in_motion = true
+    @in_journey = true
   end
 
 
