@@ -13,17 +13,19 @@ RSpec.describe Garage do
     end
 
     it "initializes as empty" do
-      expect(garage.occupants).to eq []
+      expect(garage.occupants.count).to eq 0
     end
 
     it "can accept a car" do
-      expect(garage.accept(car)).to eq [car]
+      garage.accept(car)
+      expect(garage.occupants).to eq [car]
+      expect(car.in_journey?).to eq false
     end
 
     it "can release a car" do
       garage.accept(car)
       garage.release_car
-      expect(garage.occupants).to eq []
+      expect(garage.occupants.count).to eq 0
     end
 
   end

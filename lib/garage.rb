@@ -10,6 +10,7 @@ class Garage
 
   def accept(car)
     @occupants << car
+    @in_journey = false
   end
 
   def release_car
