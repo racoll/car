@@ -19,6 +19,10 @@ RSpec.describe Car do
       expect(car.running?).to eq false
     end
 
+    it "initializes with an empty tank of fuel" do
+      expect(car.check_fuel).to eq (0)
+    end
+
   end
 
 end
