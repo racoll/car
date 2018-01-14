@@ -12,4 +12,8 @@ class Garage
     @occupants << car
   end
 
+  def release_car
+    @occupants.pop
+  end
+
 end

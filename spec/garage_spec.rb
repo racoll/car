@@ -20,6 +20,12 @@ RSpec.describe Garage do
       expect(garage.accept(car)).to eq [car]
     end
 
+    it "can release a car" do
+      garage.accept(car)
+      garage.release_car
+      expect(garage.occupants).to eq []
+    end
+
   end
 
 end
