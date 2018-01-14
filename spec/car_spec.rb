@@ -28,6 +28,11 @@ RSpec.describe Car do
       expect(car.check_fuel).to eq (1)
     end
 
+    it "can be driven" do
+      car.drive
+      expect(car.in_motion?).to eq true
+    end
+
   end
 
 end

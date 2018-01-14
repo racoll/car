@@ -3,6 +3,7 @@ class Car
   def initialize
     @engine_on = false
     @tank_contents = 0
+    @in_motion = false
   end
 
   def running?
@@ -20,6 +21,16 @@ class Car
   def fill_up
     @tank_contents += 1
   end
+
+  def in_motion?
+    @in_motion
+  end
+
+  def drive
+    @in_motion = true
+  end
+
+
 
 
 
