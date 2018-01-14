@@ -29,11 +29,9 @@ class Car
   end
 
   def drive
+    fail "Car has no fuel!" if @tank_contents == 0
     @in_journey = true
   end
-
-
-
 
 
 end

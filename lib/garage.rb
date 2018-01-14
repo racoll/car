@@ -9,12 +9,27 @@ class Garage
   end
 
   def accept(car)
+    # fail "Garage full!" if @occupants.full?
+    # @in_journey = false
     @occupants << car
-    @in_journey = false
   end
 
   def release_car
+    fail "No car in garage!" if @occupants.empty?
+    # @in_journey = true
     @occupants.pop
   end
+
+  # private
+
+    # attr_reader :occupants
+
+    # def full?
+    #   @occupants.count >= 1
+    # end
+
+    # def empty?
+    #   @occupants.count = 0
+    # end
 
 end

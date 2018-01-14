@@ -4,8 +4,6 @@ RSpec.describe Car do
 
   subject(:car) { described_class.new }
 
-  describe "car" do
-
     it "exists" do
       expect(car).to be_an_instance_of Car
     end
@@ -29,11 +27,19 @@ RSpec.describe Car do
       expect(car.tank_contents).to eq (1)
     end
 
-    it "can be driven" do
-      car.drive
-      expect(car.in_journey?).to eq true
+    describe "#drive" do
+
+      it "can be driven" do
+        car.fill_up
+        car.drive
+        expect(car.in_journey?).to eq true
+      end
+
+      it "raises an error if car has no fuel" do
+        expect { car.drive}.to raise_error "Car has no fuel!"
+      end
     end
 
-  end
+
 
 end
