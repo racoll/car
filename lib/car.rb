@@ -1,5 +1,7 @@
 class Car
 
+  attr_reader :tank_contents
+  
   def initialize
     @engine_on = false
     @tank_contents = 0

@@ -26,6 +26,7 @@ RSpec.describe Car do
     it "can be filled up with petrol" do
       car.fill_up
       expect(car.check_fuel).to eq (1)
+      expect(car.tank_contents).to eq (1)
     end
 
     it "can be driven" do
