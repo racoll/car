@@ -19,14 +19,14 @@ RSpec.describe Garage do
 
       it "can accept a car" do
         garage.accept(car)
-        # expect(car.in_journey?).to eq false
+        expect(car.in_journey?).to eq false
         expect(garage.occupants).to eq [car]
       end
 
-      # it "raises an error if a car is already present" do
-      #   garage.accept(car)
-      #   expect { garage.accept(car) }.to raise_error "Garage full!"
-      # end
+      it "raises an error if a car is already present" do
+        garage.accept(car)
+        expect { garage.accept(car) }.to raise_error "Garage full!"
+      end
 
     end
 

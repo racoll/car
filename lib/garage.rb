@@ -9,7 +9,7 @@ class Garage
   end
 
   def accept(car)
-    # fail "Garage full!" if @occupants.full?
+    fail "Garage full!" if @occupants == [car]
     # @in_journey = false
     @occupants << car
   end
