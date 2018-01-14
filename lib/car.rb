@@ -4,4 +4,8 @@ class Car
     true
   end
 
+  def start_engine
+    running?
+  end
+
 end

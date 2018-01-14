@@ -11,6 +11,7 @@ RSpec.describe Car do
     end
 
     it "can be started" do
+      car.start_engine
       expect(car.running?).to eq true
     end
 
