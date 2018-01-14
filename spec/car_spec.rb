@@ -15,6 +15,10 @@ RSpec.describe Car do
       expect(car.running?).to eq true
     end
 
+    it "initializes with the engine off" do
+      expect(car.running?).to eq false
+    end
+
   end
 
 end

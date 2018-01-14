@@ -1,11 +1,15 @@
 class Car
 
+  def initialize
+    @engine_on = false
+  end
+
   def running?
-    true
+    @engine_on
   end
 
   def start_engine
-    running?
+    @engine_on = true
   end
 
 end
