@@ -1,6 +1,8 @@
 class Car
 
-  attr_reader :tank_contents
+  MAXIMUM_FUEL_CONTENTS = 1
+
+  attr_reader :tank_contents, :in_journey
 
   def initialize
     @engine_on = false
@@ -31,6 +33,7 @@ class Car
   def drive
     fail "Car has no fuel!" if @tank_contents == 0
     @in_journey = true
+    @tank_contents -= 0.25
   end
 
 

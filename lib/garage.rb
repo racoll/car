@@ -11,12 +11,13 @@ class Garage
   def accept(car)
     fail "Garage full!" if @occupants == [car]
     # @in_journey = false
+    car.in_journey
     @occupants << car
   end
 
   def release_car
     fail "No car in garage!" if @occupants.empty?
-    # @in_journey = true
+    @in_journey = true
     @occupants.pop
   end
 

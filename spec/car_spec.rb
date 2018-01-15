@@ -38,6 +38,12 @@ RSpec.describe Car do
       it "raises an error if car has no fuel" do
         expect { car.drive}.to raise_error "Car has no fuel!"
       end
+
+      it "reduces the fuel contents by a quarter" do
+        car.fill_up
+        car.drive
+        expect(car.tank_contents).to eq 0.75
+      end
     end
 
 
