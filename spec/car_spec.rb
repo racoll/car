@@ -2,7 +2,7 @@ require "car"
 
 RSpec.describe Car do
 
-  let(:location) { double :location }
+  let(:start_location) { double :start_location }
 
   subject(:car) { described_class.new }
 
@@ -49,23 +49,23 @@ RSpec.describe Car do
 
       it "can be driven" do
         car.fill_up
-        car.drive(location)
+        car.drive(start_location)
         expect(car.in_journey?).to eq true
       end
 
       it "can drive to a location and store that" do
         car.fill_up
-        car.drive(location)
-        expect(car.journeys).to eq [location]
+        car.drive(start_location)
+        expect(car.journeys).to eq [start_location]
       end
 
       it "raises an error if car has no fuel" do
-        expect { car.drive(location) }.to raise_error "Car has no fuel!"
+        expect { car.drive(start_location) }.to raise_error "Car has no fuel!"
       end
 
       it "reduces the fuel contents by a quarter" do
         car.fill_up
-        car.drive(location)
+        car.drive(start_location)
         expect(car.tank_contents).to eq 0.75
       end
     end
