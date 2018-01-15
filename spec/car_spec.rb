@@ -17,15 +17,27 @@ RSpec.describe Car do
       expect(car.running?).to eq false
     end
 
+
     it "initializes with an empty tank of fuel" do
       expect(car.check_fuel).to eq (0)
     end
 
-    it "can be filled up with petrol" do
-      car.fill_up
-      expect(car.check_fuel).to eq (1)
-      expect(car.tank_contents).to eq (1)
+    describe "#fill_up" do
+
+      it "can be filled up with petrol" do
+        car.fill_up
+        expect(car.check_fuel).to eq (1)
+        expect(car.tank_contents).to eq (1)
+      end
+
+      it "raises an error if fuel is topped up on a full tank" do
+        car.fill_up
+        expect { car.fill_up}.to raise_error "Tank is full!"
+      end
+
+
     end
+
 
     describe "#drive" do
 
@@ -45,7 +57,5 @@ RSpec.describe Car do
         expect(car.tank_contents).to eq 0.75
       end
     end
-
-
 
 end
