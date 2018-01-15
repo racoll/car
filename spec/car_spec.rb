@@ -24,8 +24,12 @@ RSpec.describe Car do
       expect(car.check_fuel).to eq (0)
     end
 
-    it "has an empty list of stations by default" do
-      expect(car.journeys).to be_empty
+    it "has an empty list of start points by default" do
+      expect(car.start_points).to be_empty
+    end
+
+    it "has an empty list of end points by default" do
+      expect(car.end_points).to be_empty
     end
 
     describe "#fill_up" do
@@ -44,6 +48,16 @@ RSpec.describe Car do
 
     end
 
+    describe "#stop" do
+
+      it "can stop" do
+        car.fill_up
+        car.drive(start_location)
+        car.stop
+        expect(car.in_journey).to eq false
+      end
+    end
+
 
     describe "#drive" do
 
@@ -53,11 +67,12 @@ RSpec.describe Car do
         expect(car.in_journey?).to eq true
       end
 
-      it "can drive to a location and store that" do
+      it "can drive from a location and store that" do
         car.fill_up
         car.drive(start_location)
-        expect(car.journeys).to eq [start_location]
+        expect(car.start_points).to eq [start_location]
       end
+
 
       it "raises an error if car has no fuel" do
         expect { car.drive(start_location) }.to raise_error "Car has no fuel!"
