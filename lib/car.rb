@@ -3,13 +3,14 @@ class Car
   MAXIMUM_FUEL_CONTENTS = 1
   MINIMUM_FUEL_CONTENTS = 0
 
-  attr_reader :tank_contents
+  attr_reader :tank_contents, :journeys, :location
   attr_accessor :in_journey
 
   def initialize
     @engine_on = false
     @tank_contents = 0
     @in_journey = false
+    @journeys = []
   end
 
   def running?
@@ -35,10 +36,11 @@ class Car
   end
   # redundant
 
-  def drive
+  def drive(location)
     fail "Car has no fuel!" if @tank_contents == MINIMUM_FUEL_CONTENTS
     @in_journey = true
     @tank_contents -= 0.25
+    @journeys << location
   end
 
 
