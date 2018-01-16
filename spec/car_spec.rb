@@ -3,6 +3,7 @@ require "car"
 RSpec.describe Car do
 
   let(:start_location) { double :start_location }
+  let(:finish_location) { double :finish_location }
 
   subject(:car) { described_class.new }
 
