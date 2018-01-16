@@ -49,6 +49,9 @@ class Car
     @end_points << finish_location
   end
 
+  def park
+  end
+
 
 
 end
