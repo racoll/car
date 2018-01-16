@@ -41,7 +41,6 @@ class Car
   def drive(start_location)
     fail "Car has no fuel!" if @tank_contents == MINIMUM_FUEL_CONTENTS
     @in_journey = true
-    @tank_contents -= 0.25
     @start_points << start_location
   end
 
@@ -49,6 +48,7 @@ class Car
     @in_journey = false
     @end_points << finish_location
     @mileage += 10
+    @tank_contents -= 0.25
   end
 
 

@@ -71,6 +71,14 @@ RSpec.describe Car do
         car.stop(finish_location)
         expect(car.mileage).to eq 10
       end
+
+      it "reduces the fuel contents by a quarter" do
+        car.fill_up
+        car.drive(start_location)
+        car.stop(finish_location)
+        expect(car.tank_contents).to eq 0.75
+      end
+
     end
 
 
@@ -93,11 +101,6 @@ RSpec.describe Car do
         expect { car.drive(start_location) }.to raise_error "Car has no fuel!"
       end
 
-      it "reduces the fuel contents by a quarter" do
-        car.fill_up
-        car.drive(start_location)
-        expect(car.tank_contents).to eq 0.75
-      end
     end
 
 end
