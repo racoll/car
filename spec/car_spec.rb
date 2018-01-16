@@ -64,6 +64,13 @@ RSpec.describe Car do
         car.stop(finish_location)
         expect(car.end_points).to eq [finish_location]
       end
+
+      it "accumulates mileage when it completes its journey" do
+        car.fill_up
+        car.drive(start_location)
+        car.stop(finish_location)
+        expect(car.mileage).to eq 10
+      end
     end
 
 

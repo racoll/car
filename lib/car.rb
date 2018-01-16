@@ -3,7 +3,7 @@ class Car
   MAXIMUM_FUEL_CONTENTS = 1
   MINIMUM_FUEL_CONTENTS = 0
 
-  attr_reader :tank_contents, :start_points, :end_points, :start_location, :finish_location
+  attr_reader :tank_contents, :start_points, :end_points, :start_location, :finish_location, :mileage
   attr_accessor :in_journey
 
   def initialize
@@ -12,6 +12,7 @@ class Car
     @in_journey = false
     @start_points = []
     @end_points = []
+    @mileage = 0
   end
 
   def running?
@@ -47,11 +48,8 @@ class Car
   def stop(finish_location)
     @in_journey = false
     @end_points << finish_location
+    @mileage += 10
   end
-
-  def park
-  end
-
 
 
 end
