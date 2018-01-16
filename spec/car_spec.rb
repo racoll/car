@@ -53,8 +53,15 @@ RSpec.describe Car do
       it "can stop" do
         car.fill_up
         car.drive(start_location)
-        car.stop
+        car.stop(finish_location)
         expect(car.in_journey).to eq false
+      end
+
+      it "can drive to a location and store that" do
+        car.fill_up
+        car.drive(start_location)
+        car.stop(finish_location)
+        expect(car.end_points).to eq [finish_location]
       end
     end
 
