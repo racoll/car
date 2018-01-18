@@ -50,8 +50,8 @@ RSpec.describe Garage do
     describe "#health_check" do
 
       it "checks the condition of the car returning a random report" do
-        garage.health_check
-        expect(garage.health_check).to eq "A OK!"
+        # garage.health_check
+        expect(["A OK!", "Puncture", "Blown gasket"]).to include(garage.health_check)
       end
 
     end
