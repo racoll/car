@@ -3,6 +3,7 @@ require "car"
 
 RSpec.describe Garage do
 
+  let(:car_problems) { double :car_problems }
 
   subject(:garage) { described_class.new }
   subject(:car) { Car.new }
@@ -48,10 +49,11 @@ RSpec.describe Garage do
 
     describe "#health_check" do
 
-      it "checks the condition of the car" do
+      it "checks the condition of the car returning a random report" do
+        garage.health_check
         expect(garage.health_check).to eq "A OK!"
       end
-      
+
     end
 
 

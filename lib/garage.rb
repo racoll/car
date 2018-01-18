@@ -2,10 +2,11 @@ require_relative "car"
 
 class Garage
 
-  attr_reader :occupants
+  attr_reader :occupants, :car_problems
 
   def initialize
     @occupants = []
+    @car_problems = ["A OK!", "Puncture", "Blown gasket"]
   end
 
   def accept(car)
@@ -21,7 +22,7 @@ class Garage
   end
 
   def health_check
-    "A OK!"
+    @car_problems.sample
   end
 
   # private
