@@ -20,6 +20,10 @@ class Garage
     @occupants.pop
   end
 
+  def health_check
+    "A OK!"
+  end
+
   # private
 
     # attr_reader :occupants
