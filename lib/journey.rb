@@ -2,8 +2,12 @@ require_relative "car"
 
 class Journey
 
-  def complete_trip
+  attr_reader :round_trip
+
+  def initialize
+    @round_trip = []
   end
+
 
 
 end
