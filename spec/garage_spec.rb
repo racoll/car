@@ -17,6 +17,10 @@ RSpec.describe Garage do
       expect(garage.occupants.count).to eq 0
     end
 
+    it "can fix a car" do
+      expect(garage.fix(car)).to eq "Car fixed!"
+    end
+
     describe "#accept" do
 
       it "can accept a car" do
@@ -31,6 +35,7 @@ RSpec.describe Garage do
       end
 
     end
+
 
     describe "#release_car" do
 

@@ -25,6 +25,10 @@ class Garage
     @car_problems.sample
   end
 
+  def fix(car)
+    "Car fixed!"
+  end
+
   # private
 
     # attr_reader :occupants
