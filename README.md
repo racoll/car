@@ -9,6 +9,7 @@ I wanted to practice my Ruby skills, specifically those of good separation of co
 ### Built with
 
 - Ruby
+- RSpec
 
 ### Running the tests
 
