@@ -1,10 +1,14 @@
-## car
+## Car
 
 This is a Ruby program to imitate the functionality of a simple car.
 
 ### Motivation
 
 I wanted to practice my Ruby skills, specifically those of good separation of concerns, good Object Oriented Design, and effective Test Driven Development.
+
+### Built with
+
+- Ruby
 
 ### Running the tests
 
@@ -27,7 +31,3 @@ I wanted to practice my Ruby skills, specifically those of good separation of co
   - car.drive(london)
   - car.stop(manchester)
   - etc.
-
-### Built with
-
-- Ruby
