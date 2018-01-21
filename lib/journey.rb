@@ -10,8 +10,8 @@ class Journey
   end
 
   def compile_journey
-    @round_trip << start_location
-    @round_trip << finish_location
+    @round_trip << @start_points
+    @round_trip << @end_points
   end
 
 

@@ -4,7 +4,7 @@ class Car
   MINIMUM_FUEL_CONTENTS = 0
 
   attr_reader :tank_contents, :start_points, :end_points, :start_location, :finish_location, :mileage
-  attr_accessor :in_journey
+  attr_accessor :in_journey, :start_points, :end_points
 
   def initialize
     @engine_on = false
