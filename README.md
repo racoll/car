@@ -32,3 +32,11 @@ I wanted to practice my Ruby skills, specifically those of good separation of co
   - car.drive(london)
   - car.stop(manchester)
   - etc.
+
+### To do:
+
+- get the journey class to take care of compiling the journey
+- specify the amount of fuel to add to the car
+- create different journeys that have built in start and end points and these deduct a specific amount of fuel.
+- create a printer class that will be responsible for displaying the state of the car
+- build out the garage capabilities and range of problems that can occur and be fixed.
