@@ -5,6 +5,7 @@ RSpec.describe Journey do
 
   let(:start_location) { double :start_location }
   let(:finish_location) { double :finish_location }
+  let(:car) { double :car }
 
   subject(:journey) { described_class.new }
   subject(:car) { Car.new }
